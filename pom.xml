@@ -5,17 +5,29 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <groupId>si.fri.rso.samples</groupId>
-    <artifactId>customers</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <groupId>si.fri.rso.uberapp</groupId>
+    <artifactId>users</artifactId>
+    <version>1.0.0</version>
+    <modules>
+        <module>users-api</module>
+    </modules>
+    <!--
+    <modules>
+        <module>users-api</module>
+        <module>users-service</module>
+        <module>users-models</module>
+    </modules>
+    -->
 
     <packaging>pom</packaging>
 
+    <!--
     <modules>
         <module>api</module>
         <module>services</module>
         <module>models</module>
     </modules>
+    -->
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -80,6 +92,7 @@
                 <version>${postgresql.version}</version>
             </dependency>
 
+            <!--
             <dependency>
                 <groupId>si.fri.rso.samples</groupId>
                 <artifactId>customers-api</artifactId>
@@ -95,6 +108,7 @@
                 <artifactId>customers-services</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            -->
         </dependencies>
     </dependencyManagement>
 

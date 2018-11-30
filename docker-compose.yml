@@ -7,13 +7,13 @@ services:
     environment:
       POSTGRES_USER: dbuser
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: customer
-  rso-customers:
-    image: glumac/uberapp:0.1
+      POSTGRES_DB: user
+  uberapp:
+    image: glumac/testuberapp:0.1
     ports:
       - 8080:8080
     environment:
-      KUMULUZEE_DATASOURCES0_CONNECTIONURL: jdbc:postgresql://postgres:5432/customer
+      KUMULUZEE_DATASOURCES0_CONNECTIONURL: jdbc:postgresql://postgres:5432/user
       KUMULUZEE_CONFIG_ETCD_HOSTS: http://etcd:2379
       KUMULUZEE_DISCOVERY_ETCD_HOSTS: http://etcd:2379
     depends_on:
