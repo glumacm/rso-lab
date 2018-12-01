@@ -54,7 +54,7 @@ public class UserService {
         return JPAUtils.queryEntities(em, User.class, queryParameters);
     }
 
-    public User getUser(Integer userId) {
+    public User getUser(String userId) {
 
         User user = em.find(User.class, userId);
 
