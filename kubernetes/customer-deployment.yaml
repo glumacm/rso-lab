@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: customer-deployment
+  name: user-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: customer
+      app: user
   template:
     metadata:
       labels:
-        app: customer
+        app: user
     spec:
       containers:
-      - image: glumac/uberapp:0.1
-        name: customer
+      - image: glumac/testuberapp:0.1
+        name: user
         imagePullPolicy: "Always"
         env:
           - name: KUMULUZEE_DISCOVERY_CLUSTER
@@ -24,7 +24,7 @@ spec:
           - name: KUMULUZEE_CONFIG_ETCD_HOSTS
             value: http://etcd:2379
           - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
-            value: jdbc:postgresql://postgres-customer:5432/customer
+            value: jdbc:postgresql://postgres-customer:5432/user #previous customer
           - name: KUMULUZEE_DATASOURCES0_USERNAME
             value: dbuser
           - name: KUMULUZEE_DATASOURCES0_PASSWORD

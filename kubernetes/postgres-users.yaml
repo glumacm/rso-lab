@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: postgres-customers-deployment
+  name: postgres-users-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: postgres-customer
+      app: postgres-user
   template:
     metadata:
       labels:
-        app: postgres-customer
+        app: postgres-user
     spec:
       containers:
         - image: centos/postgresql-94-centos7
-          name: postgres-customers
+          name: postgres-users
           env:
             - name: POSTGRESQL_USER
               value: dbuser
             - name: POSTGRESQL_PASSWORD
               value: postgres
             - name: POSTGRESQL_DATABASE
-              value: customer
+              value: user
           ports:
-          - containerPort: 5432
+          - containerPort: 5433 #previous 5432
             protocol: TCP
