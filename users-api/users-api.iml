@@ -107,5 +107,7 @@
     <orderEntry type="library" name="Maven: org.glassfish.jersey.media:jersey-media-json-processing:2.27" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish:jsonp-jaxrs:1.1.1" level="project" />
     <orderEntry type="library" name="Maven: com.kumuluz.ee.rest:kumuluzee-rest-core:1.2.3" level="project" />
+    <orderEntry type="library" name="Maven: com.kumuluz.ee.discovery:kumuluzee-discovery-common:1.1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.vdurmont:semver4j:2.0.2" level="project" />
   </component>
 </module>
