@@ -78,7 +78,8 @@ public class UserService {
         return user;
     }
 
-    public User putUser(String userId, User user) {
+    //public User putUser(String userId, User user) {
+    public User putUser(Integer userId, User user) {
 
         User c = em.find(User.class, userId);
 
@@ -98,7 +99,7 @@ public class UserService {
         return user;
     }
 
-    public boolean deleteUser(String userId) {
+    public boolean deleteUser(Integer userId) {
 
         User customer = em.find(User.class, userId);
 
