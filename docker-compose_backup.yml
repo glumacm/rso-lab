@@ -15,8 +15,8 @@ services:
     environment:
       #KUMULUZEE_DATASOURCES0_CONNECTIONURL: jdbc:postgresql://postgres:5432/user
       KUMULUZEE_DATASOURCES0_CONNECTIONURL: jdbc:postgresql://postgres:5433/user
-      KUMULUZEE_CONFIG_ETCD_HOSTS: http://etcd:2389
-      KUMULUZEE_DISCOVERY_ETCD_HOSTS: http://etcd:2389
+      KUMULUZEE_CONFIG_ETCD_HOSTS: http://etcd:2379
+      KUMULUZEE_DISCOVERY_ETCD_HOSTS: http://etcd:2379
     depends_on:
       - postgres
       - etcd
@@ -27,9 +27,9 @@ services:
     command: >-
       /usr/local/bin/etcd
       -name node1
-      -advertise-client-urls http://etcd:2389
-      -listen-client-urls http://0.0.0.0:2389
-      -initial-advertise-peer-urls http://etcd:2381
-      -listen-peer-urls http://0.0.0.0:2381
-      -initial-cluster node1=http://etcd:2381
+      -advertise-client-urls http://etcd:2379
+      -listen-client-urls http://0.0.0.0:2379
+      -initial-advertise-peer-urls http://etcd:2380
+      -listen-peer-urls http://0.0.0.0:2380
+      -initial-cluster node1=http://etcd:2380
       -cors="*"
