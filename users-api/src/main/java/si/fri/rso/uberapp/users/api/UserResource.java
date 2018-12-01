@@ -29,7 +29,7 @@ public class UserResource {
         User user = userBean.getUser(userId);
         return user != null
                 ? Response.ok(user).build()
-                : Response.status(Response.Status.NOT_FOUND).build();
+                : Response.status(Response.Status.NOT_IMPLEMENTED).build();
     }
 
     @GET
