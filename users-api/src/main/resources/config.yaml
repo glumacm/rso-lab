@@ -28,7 +28,7 @@ kumuluzee:
   metrics:
     web-instrumentation:
     - name: users-endpoint
-      url-pattern: /users/*
+      url-pattern: /v1/users/*
   logs:
     config-file: '<?xml version="1.0" encoding="UTF-8"?>
                     <Configuration name="customers">

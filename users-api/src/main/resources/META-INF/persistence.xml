@@ -8,14 +8,13 @@
 
         <jta-data-source>jdbc/UberApp</jta-data-source>
 
-        <class>si.fri.rso.uberapp.users.User</class>
+        <class>si.fri.rso.uberapp.users.api.User</class>
 
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="create"/>
             <property name="javax.persistence.schema-generation.create-source" value="metadata"/>
             <property name="javax.persistence.sql-load-script-source"
-                      value="sql-scripts/init-customers.sql" />
-            <property name="javax.persistence.schema-generation.drop-source" value="metadata"/>
+                      value="sql-scripts/init-users.sql" />
             <property name="javax.persistence.schema-generation.drop-source" value="metadata"/>
         </properties>
     </persistence-unit>
