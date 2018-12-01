@@ -10,8 +10,8 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-@Path("users")
 @ApplicationScoped
+@Path("/users")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class UserResource {
@@ -26,7 +26,7 @@ public class UserResource {
     }
 
     @GET
-    @Path("{userId}")
+    @Path("/{userId}")
     public Response getUser(@PathParam("userId") String userId){
         User user = userBean.getUser(userId);
         return user != null
@@ -35,13 +35,13 @@ public class UserResource {
     }
 
     @GET
-    @Path("users")
+    @Path("/users")
     public Response getUsers(){
         return getAllUsers();
     }
 
     @GET
-    @Path("info")
+    @Path("/info")
     public Response info() {
 
         JsonObject json = Json.createObjectBuilder()
