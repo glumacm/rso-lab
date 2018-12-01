@@ -21,6 +21,8 @@
 
     <packaging>pom</packaging>
 
+
+    
     <!--
     <modules>
         <module>api</module>
@@ -33,7 +35,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
+        <!--<project.version>1.0.0</project.version>-->
         <kumuluzee.version>3.0.0</kumuluzee.version>
         <kumuluzee-rest.version>1.2.3</kumuluzee-rest.version>
         <kumuluzee-config.version>1.1.0</kumuluzee-config.version>
@@ -92,12 +94,13 @@
                 <version>${postgresql.version}</version>
             </dependency>
 
-            <!--
+
             <dependency>
-                <groupId>si.fri.rso.samples</groupId>
-                <artifactId>customers-api</artifactId>
+                <groupId>si.fri.rso.uberapp</groupId>
+                <artifactId>users-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <!--
             <dependency>
                 <groupId>si.fri.rso.samples</groupId>
                 <artifactId>customers-models</artifactId>
@@ -109,6 +112,7 @@
                 <version>${project.version}</version>
             </dependency>
             -->
+
         </dependencies>
     </dependencyManagement>
 
